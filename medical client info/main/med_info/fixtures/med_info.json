@@ -1,0 +1,25 @@
+[
+	{
+		"model": "med_info.client",
+		"pk": 1,
+		"fields": {
+			"first_name": "Oleh",
+			"last_name": "Stefanov",
+			"arrived": "2019-01-15 03:15",
+			"symptoms": "rashes on the palms of hands, soles of feet, and other parts of body",
+			"diagnos": "Secondary stage of syphilis"
+		}
+	},
+	
+	{
+		"model": "med_info.client",
+		"pk": 2,
+		"fields": {
+			"first_name": "Olya",
+			"last_name": "Stefanova",
+			"arrived": "2019-01-15 05:45",
+			"symptoms": "rashes on the palms of hands, soles of feet, and other parts of body",
+			"diagnos": "Secondary stage of syphilis"
+		}
+	}
+]
