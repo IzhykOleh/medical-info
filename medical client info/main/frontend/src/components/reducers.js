@@ -1,13 +1,19 @@
 import React from "react";
 import {combineReducers} from "redux";
+import { reducer as formReducer } from 'redux-form';
 
-const ButtonClickReducer = (state = {visibility: true}, action) => {
-	if (action.type === 'buttonClickAction'){
-		return Object.assign({}, state, {visibility: !state.visibility})
+const fetchClientsReducer = (state = {clients: ""}, action) => {
+	switch (action.type) {
+		case "FETCH_CLIENTS":
+			return {clients: action.clients};
+		default:
+			return state;
 	}
-	return state;
 }
 
-const globalReducer = combineReducers({ButtonClickReducer})
+const globalReducer = combineReducers({
+		fetchClientsReducer,
+		form: formReducer
+	})
 
 export default globalReducer;

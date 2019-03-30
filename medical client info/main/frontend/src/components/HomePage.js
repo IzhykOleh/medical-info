@@ -3,35 +3,16 @@ import ReactDOM from "react-dom";
 import {BrowserRouter, Route} from "react-router-dom";
 import {buttonClickAction} from "./actions";
 import {connect} from "react-redux";
+import CreateClientForm from "./CreateClientForm";
+import ShowClientInfo from './ShowClientInfo';
 
-const HomePage =({click, visibility}) => {
-
+const HomePage =() => {
 		return (
 			<div>
-				<button onClick={click}>Click me</button>
-				<ul>
-					<li>Expected text is {visibility.toString()}</li>
-				</ul>
+				<CreateClientForm/>
+				<ShowClientInfo/>
 			</div>
 		);
 }
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-	return {
-		click: () => {
-			dispatch(buttonClickAction());
-		}
-	}
-}
-
-const mapStateToProps = (state, ownProps) => {
-	return {
-		visibility: state.ButtonClickReducer.visibility
-	}
-}
-
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-	)(HomePage);
-
+export default HomePage;
